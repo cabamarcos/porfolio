@@ -1,0 +1,36 @@
+---
+import EducationItem from "./EducationItem.astro"
+const EDUCATION = [
+  {
+    date: "2024 - 2025",
+    title: "Máster en Inteligencia Artificial",
+    institution: "Universidad Internacional de La Rioja (UNIR)",
+    description:
+      "Especialización en Machine Learning, Deep Learning y procesamiento de lenguaje natural. TFM: 'Sistema inteligente de navegación urbana basado en visión artificial y penalizaciones dinámicas'. Desarrollo de proyectos con Python, TensorFlow y PyTorch.",
+  },
+  {
+    date: "2020 - 2025",
+    title: "Grado en Ingeniería Informática",
+    institution: "Universidad Carlos III de Madrid (UC3M)",
+    description:
+      "Especialización en Desarrollo de Software y Sistemas Inteligentes. TFG: 'Generación de super-máscaras en Redes Neuronales, mediante Computación Evolutiva'. Formación integral en programación, algoritmos, bases de datos y arquitecturas de software.",
+  },
+  {
+    date: "2008 - 2020",
+    title: "Educación Primaria y Bachillerato",
+    institution: "Colegio Montpellier",
+    description:
+      "Formación completa desde educación primaria hasta bachillerato. Bachillerato de Ciencias y Tecnología.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li class="">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>
