@@ -1,0 +1,31 @@
+<svg
+  {...Astro.props}
+  width="24"
+  height="24"
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMidYMid"
+>
+  <defs>
+    <linearGradient id="opencv-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5C3EE8"/>
+      <stop offset="100%" style="stop-color:#E044A7"/>
+    </linearGradient>
+  </defs>
+  <!-- OpenCV Circle -->
+  <circle cx="128" cy="128" r="120" fill="url(#opencv-gradient)"/>
+  
+  <!-- OpenCV inner circles -->
+  <circle cx="105" cy="105" r="25" fill="#FFF"/>
+  <circle cx="151" cy="105" r="25" fill="#FFF"/>
+  <circle cx="128" cy="151" r="25" fill="#FFF"/>
+  
+  <!-- OpenCV inner dots -->
+  <circle cx="105" cy="105" r="12" fill="#5C3EE8"/>
+  <circle cx="151" cy="105" r="12" fill="#5C3EE8"/>
+  <circle cx="128" cy="151" r="12" fill="#5C3EE8"/>
+  
+  <!-- OpenCV text representation with geometric shapes -->
+  <rect x="80" y="180" width="96" height="8" fill="#FFF" rx="4"/>
+  <rect x="90" y="195" width="76" height="6" fill="#FFF" rx="3"/>
+</svg>
