@@ -5,7 +5,6 @@ import robotsTxt from "astro-robots-txt"
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), robotsTxt()],
-  site: 'https://cabamarcos.github.io/porfolio/',
-  base: '/porfolio/'
+  integrations: [tailwind(), robotsTxt()]
+  // Vercel maneja automáticamente la configuración del site
 })
