@@ -6,6 +6,36 @@ import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#3776ab] text-white",
+    icon: NextJS,
+  },
+  PYTORCH: {
+    name: "PyTorch",
+    class: "bg-[#ee4c2c] text-white",
+    icon: NextJS,
+  },
+  JUPYTER: {
+    name: "Jupyter",
+    class: "bg-[#f37626] text-white",
+    icon: NextJS,
+  },
+  ML: {
+    name: "Machine Learning",
+    class: "bg-[#ff6b6b] text-white",
+    icon: NextJS,
+  },
+  CV: {
+    name: "Computer Vision",
+    class: "bg-[#4ecdc4] text-white",
+    icon: NextJS,
+  },
+  HTML: {
+    name: "HTML/CSS",
+    class: "bg-[#e34c26] text-white",
+    icon: NextJS,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
@@ -19,28 +49,61 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "SuperMask - Generación de super-máscaras en Redes Neuronales",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+      "TFG sobre generación de super-máscaras mediante computación evolutiva. Implementación de algoritmos genéticos para optimizar arquitecturas de redes neuronales. Desarrollo con Python, PyTorch y técnicas de pruning avanzadas.",
+    github: "https://github.com/cabamarcos/SuperMask",
     image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PYTHON, TAGS.PYTORCH, TAGS.ML],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Urban Route Optimization - Navegación Urbana Inteligente",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
+      "TFM: Sistema inteligente de navegación urbana basado en visión artificial y penalizaciones dinámicas. Implementación de algoritmos de optimización de rutas combinando computer vision y machine learning para navegación autónoma en entornos urbanos complejos.",
+    github: "https://github.com/GabiGR67/urban_route_optimization",
     image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PYTHON, TAGS.CV, TAGS.ML],
+  },
+  {
+    title: "GANs Experimentation - Redes Generativas Adversariales",
+    description:
+      "Proyecto universitario sobre experimentación con GANs. Implementación y comparación de diferentes arquitecturas de redes generativas. Análisis de resultados y optimización de hiperparámetros para generación de imágenes.",
+    github: "https://github.com/cabamarcos/GANs_experimentation",
+    image: "/projects/adventjs.webp",
+    tags: [TAGS.PYTHON, TAGS.JUPYTER, TAGS.ML],
+  },
+  {
+    title: "Skin Cancer Classifier - Clasificador de Cáncer de Piel",
+    description:
+      "Sistema de clasificación de cáncer de piel utilizando deep learning. Entrenamiento de modelos CNN para detección automática de lesiones cutáneas. Proyecto con aplicación médica real usando técnicas de visión artificial.",
+    github: "https://github.com/cabamarcos/Skin_cancer_classifier",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.PYTHON, TAGS.PYTORCH, TAGS.ML],
+  },
+  {
+    title: "MyChatBot - Chatbot de IA sin Backend",
+    description:
+      "Chatbot de inteligencia artificial gratuito que funciona completamente en el frontend. Implementación sin necesidad de backend propio, integración con APIs de IA. Interfaz moderna y responsive para una experiencia de usuario óptima.",
+    github: "https://github.com/cabamarcos/MyChatBot",
+    link: "https://cabamarcos.github.io/MyChatBot/",
+    image: "/projects/adventjs.webp",
+    tags: [TAGS.HTML, TAGS.PYTHON],
+  },
+  {
+    title: "VideoFlix - Plataforma de Video con Control Remoto",
+    description:
+      "Aplicación web que puede ser utilizada con un control remoto. Interfaz intuitiva para navegación de contenido multimedia. Desarrollo frontend con HTML, CSS y JavaScript, optimizada para experiencia de usuario con dispositivos remotos.",
+    github: "https://github.com/cabamarcos/VideoFlix",
+    link: "https://cabamarcos.github.io/VideoFlix/",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.HTML],
   },
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, github, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
