@@ -1,9 +1,12 @@
 ---
 const birthDate = new Date("2002-12-26");
 const today = new Date();
-let age = today.getFullYear() - birthDate.getFullYear();
-const birthDayThisYear = new Date(today.getFullYear(), 11, 26);
-if (today < birthDayThisYear) age--;
+const birthMonth = 11;
+const birthDay = 26;
+let age = today.getFullYear() - 2002;
+if (today.getMonth() < birthMonth || (today.getMonth() === birthMonth && today.getDate() < birthDay)) {
+  age--;
+}
 const personalImageAlt = "Marcos Caballero"
 ---
 
