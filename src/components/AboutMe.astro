@@ -1,5 +1,8 @@
 ---
- const personalImageAlt = "Marcos Caballero"
+const birthDate = new Date("2002-12-26");
+const today = new Date();
+const age = today.getFullYear() - birthDate.getFullYear() - (today < new Date(birthDate.getFullYear() + "-" + (birthDate.getMonth() + 1).toString().padStart(2, "0") + "-" + birthDate.getDate().toString().padStart(2, "0")) ? 1 : 0);
+const personalImageAlt = "Marcos Caballero"
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
@@ -7,7 +10,7 @@
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Marcos Caballero Cortés, tengo 22 años y soy de Madrid, España 🇪🇸. 
+      Me llamo Marcos Caballero Cortés, tengo {age} años y soy de Madrid, España 🇪🇸. 
       Actualmente me encuentro trabajando en <strong>Management Solutions</strong> tras 
       completar mi formación en Ingeniería Informática y mi Máster en Inteligencia Artificial.
     </p>
